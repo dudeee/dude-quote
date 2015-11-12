@@ -1,6 +1,6 @@
 {
   "name": "bolt-quote",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sends a quote of the day everyday",
   "main": "build/index.js",
   "scripts": {
