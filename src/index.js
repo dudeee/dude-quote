@@ -16,17 +16,6 @@ export default bot => {
   });
 
   bot.agenda.on('ready', () => {
-    let job = bot.agenda.create('quote');
-
-    job.repeatAt(data.repeatAt);
-
-    bot.agenda.on('complete', function(job) {
-      console.log("Job %s finished", job.attrs.name);
-    });
-    bot.agenda.on('start', function(job) {
-      console.log("Job %s started", job.attrs.name);
-    });
-
-    job.save();
+    bot.agenda.every(data.every, 'quote');
   })
 }
