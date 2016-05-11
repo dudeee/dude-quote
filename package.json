@@ -1,16 +1,16 @@
 {
-  "name": "bolt-quote",
-  "version": "1.0.4",
+  "name": "dude-quote",
+  "version": "1.0.5",
   "description": "Sends a quote of the day everyday",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "bolt"
+    "dude"
   ],
   "repository": {
-    "git": "https://github.com/mdibaiee/bolt-quote"
+    "git": "https://github.com/mdibaiee/dude-quote"
   },
   "author": "Mahdi Dibaiee <mdibaiee@aol.com> (http://dibaiee.ir/)",
   "license": "MIT",

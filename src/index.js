@@ -3,7 +3,7 @@ import unirest from 'unirest';
 export default bot => {
   let config = bot.config.quote;
 
-  bot.agenda.define('quote', (job, done) => {
+  bot.schedule.scheduleJob('0 0 9 * * * *', (job, done) => {
     unirest.get('http://api.theysaidso.com/qod.json').end(response => {
       if (!response.body.contents) return;
 
@@ -14,8 +14,4 @@ export default bot => {
       done();
     });
   });
-
-  bot.agenda.on('ready', () => {
-    bot.agenda.every(config.every, 'quote');
-  })
 }
