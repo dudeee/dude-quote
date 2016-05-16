@@ -13,7 +13,7 @@ export default bot => {
       }
 
       let quote = response.body.contents.quotes[0];
-      let message = quote.quote + ` _–${quote.author}_`;
+      let message = `*Quote of the day*: ${quote.quote} _–${quote.author}_`;
       bot.sendMessage(channel, message);
 
       done();
