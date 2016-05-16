@@ -7,7 +7,10 @@ export default bot => {
 
   bot.schedule.scheduleJob(every, (job, done) => {
     unirest.get('http://api.theysaidso.com/qod.json').end(response => {
-      if (!response.body.contents) return;
+      if (!response.body.contents) {
+        bot.log.error('[quote]', response.body);
+        return;
+      }
 
       let quote = response.body.contents.quotes[0];
       let message = quote.quote + ` _–${quote.author}_`;
