@@ -1,6 +1,6 @@
 {
   "name": "dude-quote",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Sends a quote of the day everyday",
   "main": "build/index.js",
   "scripts": {
