@@ -1,6 +1,6 @@
 {
   "name": "dude-quote",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Quote of the day, retrieved from brainyquote.com",
   "main": "build/index.js",
   "scripts": {

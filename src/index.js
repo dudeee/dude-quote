@@ -6,7 +6,7 @@ export default bot => {
   const channel = config.channel || 'general';
   const every = config.every || '0 0 9 * * * *';
 
-  bot.schedule.scheduleJob(every, (job, done) => {
+  bot.schedule.scheduleJob(every, () => {
 
     unirest.get('http://feeds.feedburner.com/brainyquote/QUOTEBR').end(response => {
       if (response.error) {
@@ -30,8 +30,6 @@ export default bot => {
         mrkdwn_in: ['text'],
       }];
       bot.sendMessage(channel, '', { attachments, websocket: false });
-
-      done();
     });
   });
 }
